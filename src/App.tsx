@@ -35,6 +35,13 @@ const App: React.FC = () => {
         setTodo={setTodo}
         handleAdd={handleAdd}
       />
+
+      {/* <TodoList /> */}
+      <ul>
+      {todos.map(t => (
+        <li key={t.id}>{t.todo}</li>
+      ))}
+      </ul>
     </div>
   );
 }
