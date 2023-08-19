@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+
 import './App.css';
 import './assets/styles.css'
+import TodoList from './components/TodoList';
 import InputField from './components/InputField'
+
 import { Todo } from './model'
 
 
@@ -36,12 +39,7 @@ const App: React.FC = () => {
         handleAdd={handleAdd}
       />
 
-      {/* <TodoList /> */}
-      <ul>
-      {todos.map(t => (
-        <li key={t.id}>{t.todo}</li>
-      ))}
-      </ul>
+      <TodoList todos={todos} setTodos={setTodos}/>
     </div>
   );
 }
