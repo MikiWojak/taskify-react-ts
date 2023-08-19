@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
 import { MdDone } from 'react-icons/md'
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
+import React, { useEffect, useState, useRef } from 'react'
 
 import { Todo } from '../model'
 
@@ -71,11 +71,9 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
             
             <div>
                 <span className="icon" onClick={() => {
-                    if (!edit && !todo.isDone) {
-                        setEdit(!edit)
-                    }
-
-
+                        if (!edit && !todo.isDone) {
+                            setEdit(!edit)
+                        }
                 }}>
                     <AiFillEdit />
                 </span>
